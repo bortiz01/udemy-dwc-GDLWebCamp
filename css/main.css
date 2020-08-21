@@ -87,6 +87,118 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* --------------------------------- General -------------------------------- */
+:root {
+  --backgroundMain: #f2f2f2;
+  --iconColor: #fe4918;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--backgroundMain);
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+/* --------------------------------- Header --------------------------------- */
+div.hero {
+  background-image: url(../img/encabezado.jpg);
+  height: 100vh;
+  background-position: center center;
+  /* background-position: top center; */
+  background-size: cover;
+}
+
+div.contenido-header {
+  padding-top: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.contenido-header {
+    padding-top: 10px;
+  }
+}
+nav.redes-sociales {
+  text-align: center;
+}
+
+nav.redes-sociales a {
+  color: white;
+  font-size: 2em;
+  margin-right: 20px;
+}
+
+nav.redes-sociales a:last-child {
+  margin-right: 0px;
+}
+
+div.informacion-evento {
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  div.informacion-evento {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+
+div.informacion-evento p {
+  margin: 0;
+  display: inline;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+div.informacion-evento p i {
+  color: var(--iconColor);
+  font-size: 2.4rem;
+}
+
+p.fecha {
+  float: left;
+}
+
+p.ciudad {
+  float: right;
+  text-align: right;
+}
+
+h1.nombre-sitio {
+  font-size: 5.9vw;
+  font-family: "PT Sans", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  h1.nombre-sitio {
+    font-size: 11.5vw;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+p.eslogan {
+  text-transform: none !important;
+}
+
+.eslogan span {
+  font-weight: bold;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -260,4 +372,3 @@ textarea {
     page-break-after: avoid;
   }
 }
-
