@@ -91,6 +91,8 @@ textarea {
 :root {
   --backgroundMain: #f2f2f2;
   --iconColor: #fe4918;
+  --backgroundBar: #353535;
+  --pointerColor: #fe4918;
 }
 
 html {
@@ -106,6 +108,30 @@ html {
 body {
   background-color: var(--backgroundMain);
   font-family: "Open Sans", sans-serif;
+}
+
+.contenedor {
+  width: 98%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 480px) {
+  .contenedor {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contenedor {
+    width: 90%;
+    max-width: 1100px;
+  }
 }
 
 h2 {
@@ -197,6 +223,102 @@ p.eslogan {
 
 .eslogan span {
   font-weight: bold;
+}
+
+/* ------------------------------- Barra ------------------------------- */
+div.barra {
+  background-color: var(--backgroundBar);
+  padding: 20px 0;
+}
+
+div.logo {
+  width: 80%;
+  float: left;
+}
+
+@media only screen and (min-width: 768px) {
+  div.logo {
+    width: 33%;
+  }
+}
+
+div.logo img {
+  width: 100%;
+}
+
+/* ------------------------------- Navegacion ------------------------------- */
+nav.navegacion-principal {
+  display: none;
+}
+
+nav.navegacion-principal a {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+nav.navegacion-principal a:hover {
+  background-color: var(--pointerColor);
+}
+
+nav.navegacion-principal a:last-child {
+  border: 2px solid var(--pointerColor);
+  color: var(--pointerColor);
+}
+
+nav.navegacion-principal a:last-child:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  nav.navegacion-principal {
+    width: 67%;
+    float: right;
+    text-align: right;
+    display: block;
+  }
+
+  nav.navegacion-principal a {
+    padding: 10px;
+    display: inline-block;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px 0 0;
+  }
+}
+
+/* ------------------------------- Menu Movil ------------------------------- */
+div.menu-movil {
+  width: 60px;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 12px;
+}
+
+div.menu-movil:hover {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  div.menu-movil {
+    display: none;
+  }
+}
+
+div.menu-movil span {
+  height: 8px;
+  margin-bottom: 6px;
+  background-color: white;
+  display: block;
 }
 
 /* ==========================================================================
