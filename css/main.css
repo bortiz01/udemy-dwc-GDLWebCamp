@@ -87,12 +87,13 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* --------------------------------- General -------------------------------- */
+/* --------------------------------- Global -------------------------------- */
 :root {
   --backgroundMain: #f2f2f2;
   --iconColor: #fe4918;
   --backgroundBar: #353535;
   --pointerColor: #fe4918;
+  --menurColor: #fe4918;
 }
 
 html {
@@ -134,8 +135,58 @@ body {
   }
 }
 
+.seccion {
+  padding: 30px 0;
+}
+
+.seccion p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
 h2 {
   font-family: "Oswald", sans-serif;
+  font-size: 2.4em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  margin: 0 auto;
+  background-image: url(../img/separador.png);
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: var(--menurColor);
+  font-family: "PT Sans", sans-serif;
+  margin: 0;
+}
+
+.button {
+  background-color: var(--iconColor);
+  padding: 10px 40px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  font-size: 1em;
+  margin-top: 20px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e33000;
+}
+
+.float-right {
+  float: right;
 }
 
 /* --------------------------------- Header --------------------------------- */
@@ -206,6 +257,7 @@ p.ciudad {
 
 h1.nombre-sitio {
   font-size: 5.9vw;
+  text-transform: uppercase;
   font-family: "PT Sans", sans-serif;
 }
 
@@ -319,6 +371,92 @@ div.menu-movil span {
   margin-bottom: 6px;
   background-color: white;
   display: block;
+}
+
+/* -------------------------------- Talleres -------------------------------- */
+section.programa {
+  position: relative;
+}
+
+div.contenedor-video {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+div.contenido-programa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+div.programa-evento {
+  background-color: rgba(255,255,2550.8);
+  padding: 15px;
+  margin-top: 80px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.programa-evento {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  div.programa-evento {
+    width: 50%;
+  }
+}
+
+nav.menu-programa {
+  width: 100%;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  nav.menu-programa {
+    display: table;
+  }
+}
+
+nav.menu-programa a {
+  display: block;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+@media only screen and (min-width: 768px) {
+  nav.menu-programa a {
+    display: table-cell;
+  }
+}
+
+nav.menu-programa a i {
+  color: var(--iconColor);
+  font-size: 1.6em;
+  margin-right: 10px;
+}
+
+/* ----------------------------- Detalle Evento ----------------------------- */
+div.detalle-evento {
+  margin-top: 20px;
+  border-bottom: 1px solid black;
+  padding: 0 20px;
+}
+
+div.detalle-evento:nth-child(2) {
+  border: none
+}
+
+div.detalle-evento p {
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
 /* ==========================================================================
