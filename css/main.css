@@ -90,10 +90,8 @@ textarea {
 /* --------------------------------- Global -------------------------------- */
 :root {
   --backgroundMain: #f2f2f2;
-  --iconColor: #fe4918;
+  --mainColor: #fe4918;
   --backgroundBar: #353535;
-  --pointerColor: #fe4918;
-  --menurColor: #fe4918;
 }
 
 html {
@@ -162,13 +160,13 @@ h2::after {
 
 h3 {
   font-size: 1.8em;
-  color: var(--menurColor);
+  color: var(--mainColor);
   font-family: "PT Sans", sans-serif;
   margin: 0;
 }
 
 .button {
-  background-color: var(--iconColor);
+  background-color: var(--mainColor);
   padding: 10px 40px;
   color: white;
   text-transform: uppercase;
@@ -248,7 +246,7 @@ div.informacion-evento p {
 }
 
 div.informacion-evento p i {
-  color: var(--iconColor);
+  color: var(--mainColor);
   font-size: 2.4rem;
 }
 
@@ -323,12 +321,12 @@ nav.navegacion-principal a {
 }
 
 nav.navegacion-principal a:hover {
-  background-color: var(--pointerColor);
+  background-color: var(--mainColor);
 }
 
 nav.navegacion-principal a:last-child {
-  border: 2px solid var(--pointerColor);
-  color: var(--pointerColor);
+  border: 2px solid var(--mainColor);
+  color: var(--mainColor);
 }
 
 nav.navegacion-principal a:last-child:hover {
@@ -444,7 +442,7 @@ nav.menu-programa a {
 }
 
 nav.menu-programa a i {
-  color: var(--iconColor);
+  color: var(--mainColor);
   font-size: 1.6em;
   margin-right: 10px;
 }
@@ -510,7 +508,7 @@ div.invitado p {
   background-color: rgba(0,0,0,0.55);
   width: 100%;
   text-align: left;
-  color: var(--iconColor);
+  color: var(--mainColor);
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   -webkit-transition: all 0.5s ease-in-out;
@@ -519,6 +517,59 @@ div.invitado p {
 div.invitado:hover p {
   bottom: -80px;
   opacity: 0;
+}
+
+/* -------------------------------- Contador -------------------------------- */
+div.contador {
+  position: relative;
+  height: auto;
+}
+
+div.contador::before {
+  content: '';
+  background-image: url(../img/bg-resumen.jpg);
+}
+
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);  
+}
+
+ul.resumen-evento {
+  position: relative;
+  padding: 120px 0;
+}
+
+ul.resumen-evento li {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  ul.resumen-evento li {
+    width: 25%;    
+  } 
+}
+
+p.numero {
+  color: var(--mainColor);
+  font-size: 4em;
+  display: block;
+  margin: 0 0 10px 0;
 }
 
 /* ==========================================================================
