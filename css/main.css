@@ -619,13 +619,13 @@ div.tabla-precio ul li {
 
 div.tabla-precio ul li::before {
   font-family: 'Font Awesome 5 Free';
+  content: '\f00c';
   display: inline-block;
   vertical-align: top;
   padding: 0 5px;
   font-size: 20px;
   color: green;
-  -webkit-font-smoothing: antialiased;
-  content: '\f00c';
+  -webkit-font-smoothing: antialiased;  
   font-weight: 900; 
 }
 
@@ -644,6 +644,79 @@ div.tabla-precio p.numero {
 div.mapa {
   height: 420px;
   background-color: green;  
+}
+
+/* ------------------------------ Testimoniales ----------------------------- */
+div.testimoniales {
+  padding-bottom: 20px;
+}
+
+div.testimonial {
+  padding: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.testimonial {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+blockquote {
+  background-color: white;
+  border: solid 1px #e1e1e1;
+  position: relative;
+  margin: 0 0 10px 0;
+  padding-bottom: 20px;
+}
+
+blockquote p {
+  text-align: justify!important;  
+  font-size: 1em!important;
+  font-family: 'PT Sans', sans-serif;
+  padding: 0 20px 0 65px;
+}
+
+blockquote p::before {
+  content: '\201c';  
+  position: absolute;
+  left: 13px;
+  top: 8px;
+  font-size: 8rem;
+  margin: 0;
+  padding: 0;  
+  color: var(--mainColor);
+  line-height: 1;
+}
+
+footer.info-testimonial {
+  padding: 0;
+}
+
+footer.info-testimonial img {
+  float: left;
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+footer.info-testimonial cite {
+  text-align: left;  
+  color: var(--mainColor);
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 20px;
+  width: 66.6%;
+  float: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+footer.info-testimonial cite span {
+  color: black;
+  display: block;
+  text-transform: none;
+  margin-top: 5px;
 }
 
 /* ==========================================================================
