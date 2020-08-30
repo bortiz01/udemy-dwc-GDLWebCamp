@@ -509,6 +509,7 @@ div.invitado img {
   max-width: 100%;
   filter: gray;
   -webkit-filter: grayscale(1);
+  transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
 }
 
@@ -516,6 +517,7 @@ div.invitado:hover img{
   filter: none;
   -webkit-filter: grayscale(0);
   -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 div.invitado p {
@@ -531,6 +533,7 @@ div.invitado p {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 div.invitado:hover p {
@@ -773,6 +776,50 @@ div.cuenta-regresiva ul li{
     width: 25%;
     float: left;
   }
+}
+
+/* --------------------------------- Footer --------------------------------- */
+footer.site-footer {
+  background-color: var(--backgroundBar);
+  margin-top: 20px;
+  padding-top: 40px;
+}
+
+footer .contenedor > div {
+  color: white;
+  padding: 0px 20px;
+  font-size: 12px;
+  /* text-align: justify; */
+}
+
+@media only screen and (min-width: 768px) {
+  footer .contenedor > div {
+    width: 33.3%;
+    float: left;    
+  } 
+}
+
+footer h3 {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 20px;
+}
+
+footer span {
+  color: var(--mainColor);
+}
+
+footer nav.redes-sociales {
+  text-align: left;
+}
+
+p.copyright {
+  background-color: #2e2e2e;
+  color: white;
+  padding: 10px 0;
+  margin: 20px 0 0 0;
+  text-align: center;
 }
 
 /* ==========================================================================
