@@ -200,6 +200,7 @@ h3 {
 
 .button:hover {
   background-color: #e33000;
+  cursor: pointer;
 }
 
 ul {
@@ -222,7 +223,7 @@ div.hero {
 }
 
 div.contenido-header {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -236,7 +237,8 @@ nav.redes-sociales {
 
 nav.redes-sociales a {
   color: white;
-  font-size: 2em;
+  /* font-size: 2em; */
+  font-size: 4vw;
   margin-right: 20px;
 }
 
@@ -247,6 +249,7 @@ nav.redes-sociales a:last-child {
 div.informacion-evento {
   text-align: center;
   color: white;
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -260,26 +263,42 @@ div.informacion-evento {
 div.informacion-evento p {
   margin: 0;
   display: inline;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 3vw;
   text-transform: uppercase;
 }
 
 div.informacion-evento p i {
   color: var(--mainColor);
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
+  font-size: 3vw;
+  padding-right: 3px;
+}
+
+.infoHeader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .infoHeader {
+    padding: 0;
+  }
 }
 
 p.fecha {
-  float: left;
+  /* float: left; */
+  text-align: left;
 }
 
 p.ciudad {
-  float: right;
+  /* float: right; */
   text-align: right;
 }
 
 h1.nombre-sitio {
-  font-size: 5.9vw;
+  font-size: 9vw;
   text-transform: uppercase;
   font-family: "PT Sans", sans-serif;
 }
@@ -287,7 +306,8 @@ h1.nombre-sitio {
 @media only screen and (min-width: 768px) {
   h1.nombre-sitio {
     font-size: 11.5vw;
-    margin: 0;
+    /* margin: 0; */
+    margin: 20px 0;
     line-height: 1;
   }
 }
@@ -306,9 +326,14 @@ div.barra {
   padding: 20px 0;
 }
 
+div.barra-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
 div.logo {
   width: 80%;
-  float: left;
+  /* float: left; */
 }
 
 @media only screen and (min-width: 768px) {
@@ -329,7 +354,8 @@ nav.navegacion-principal {
 nav.navegacion-principal a {
   font-family: "Oswald", sans-serif;
   color: white;
-  font-size: 1.3em;
+  /* font-size: 1.3em; */
+  font-size: 2.1vw;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -355,7 +381,7 @@ nav.navegacion-principal a:last-child:hover {
 @media only screen and (min-width: 768px) {
   nav.navegacion-principal {
     width: 67%;
-    float: right;
+    /* float: right; */
     text-align: right;
     display: block;
   }
@@ -372,11 +398,12 @@ nav.navegacion-principal a:last-child:hover {
 
 /* ------------------------------- Menu Movil ------------------------------- */
 div.menu-movil {
-  width: 60px;
+  /* width: 60px; */
+  width: 50px;
   display: block;
-  float: right;
-  text-align: right;
-  margin-top: 12px;
+  /* float: right; */
+  text-align: right;  
+  margin: auto 0;
 }
 
 div.menu-movil:hover {
@@ -483,20 +510,28 @@ div.detalle-evento p {
 }
 
 /* -------------------------------- Invitados ------------------------------- */
+ul.lista-invitados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 ul.lista-invitados li {
   padding: 10px;
-  float: left;
+  /* float: left; */
 }
 
 @media only screen and (min-width: 480px) {
   ul.lista-invitados li {
-    width: 50%;
+    /* width: 50%; */
+    flex: 0 0 calc(50% - 1rem);
   }
 }
 
 @media only screen and (min-width: 768px) {
   ul.lista-invitados li {
-    width: 33.3%;
+    /* width: 33.3%; */
+    flex: 0 0 calc(33.3% - 1rem);
   }
 }
 
@@ -569,11 +604,13 @@ div.contador::before {
 ul.resumen-evento {
   position: relative;
   padding: 120px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
 }
 
 ul.resumen-evento li {
-  width: 50%;
-  float: left;
+  /* width: 50%; */
+  /* float: left; */
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -582,8 +619,10 @@ ul.resumen-evento li {
 }
 
 @media only screen and (min-width: 768px) {
-  ul.resumen-evento li {
-    width: 25%;    
+  /* ul.resumen-evento li { */
+  ul.resumen-evento {
+    /* width: 25%;     */
+    grid-template-columns: repeat(4, 1fr);
   } 
 }
 
@@ -591,7 +630,7 @@ p.numero {
   color: var(--mainColor);
   font-size: 4em;
   display: block;
-  margin: 0 0 10px 0;
+  margin: 0 0 -15px 0;
   font-family: "Oswald", sans-serif;
 }
 
@@ -601,10 +640,14 @@ ul.lista-precios > li {
 }
 
 @media only screen and (min-width: 768px) {
-  ul.lista-precios > li {
+  ul.lista-precios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* ul.lista-precios > li {
     float: left;
     width: 33.3%;
-  }
+  } */
 }
 
 div.tabla-precio {
@@ -646,22 +689,26 @@ div.tabla-precio h3 {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
+  margin-top: 0!important;
 }
 
 div.tabla-precio p.numero {
   color: black;
-  margin-top: 20px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* ---------------------------------- Mapa ---------------------------------- */
 div.mapa {
   height: 420px;
-  background-color: green;  
+  border: 1px solid gray;
 }
 
 /* ------------------------------ Testimoniales ----------------------------- */
 div.testimoniales {
   padding-bottom: 20px;
+  display: grid;  
+  grid-template-columns: repeat(1, 1fr);
 }
 
 div.testimonial {
@@ -669,10 +716,13 @@ div.testimonial {
 }
 
 @media only screen and (min-width: 768px) {
-  div.testimonial {
+  div.testimoniales {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* div.testimonial {
     float: left;
     width: 33.3%;
-  }
+  } */
 }
 
 blockquote {
@@ -688,6 +738,13 @@ blockquote p {
   font-size: 1em!important;
   font-family: 'PT Sans', sans-serif;
   padding: 0 20px 0 65px;
+  /* height: 350px; */
+}
+
+@media only screen and (min-width: 768px) {
+  blockquote p {
+    height: 350px;
+  }
 }
 
 blockquote p::before {
@@ -704,25 +761,37 @@ blockquote p::before {
 
 footer.info-testimonial {
   padding: 0;
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
 
 footer.info-testimonial img {
-  float: left;
-  width: 20%;
+  /* float: left; */
+  width: 100%;  
   border-radius: 50%;
-  margin-left: 20px;
+  margin-left: 5px;
+  /* padding-top: 15px; */
 }
 
 footer.info-testimonial cite {
   text-align: left;  
+  padding: 10px 5px 0 10px;
+  /* padding-left: 10px;
+  padding-right: 5px; */
   color: var(--mainColor);
   text-transform: uppercase;
   font-size: 12px;
-  padding-top: 20px;
-  width: 66.6%;
-  float: right;
+  /* padding-top: 20%; */
+  /* width: 66.6%; */  
+  /* float: right; */
   font-weight: bold;
-  font-style: normal;
+  font-style: normal;  
+}
+
+@media only screen and (min-width: 768px) {
+  footer.info-testimonial cite {
+    padding-top: 0;
+  }
 }
 
 footer.info-testimonial cite span {
@@ -772,10 +841,14 @@ div.cuenta-regresiva ul li{
 }
 
 @media only screen and (min-width: 768px) {
-  div.cuenta-regresiva ul li{
-    width: 25%;
-    float: left;
+  div.cuenta-regresiva ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
   }
+  /* div.cuenta-regresiva ul li{
+    width: 25%;
+    float: left;    
+  } */
 }
 
 /* --------------------------------- Footer --------------------------------- */
@@ -787,23 +860,28 @@ footer.site-footer {
 
 footer .contenedor > div {
   color: white;
-  padding: 0px 20px;
+  padding: 0 20px 20px 20px;
   font-size: 12px;
   /* text-align: justify; */
 }
 
 @media only screen and (min-width: 768px) {
-  footer .contenedor > div {
+  footer .contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* footer .contenedor > div {
     width: 33.3%;
     float: left;    
-  } 
+  }  */
 }
 
 footer h3 {
   color: white;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 footer span {
@@ -820,6 +898,136 @@ p.copyright {
   padding: 10px 0;
   margin: 20px 0 0 0;
   text-align: center;
+}
+
+/* -------------------------------- Internas -------------------------------- */
+/* ------------------------------- Reservacion ------------------------------ */
+form.registro h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+}
+
+form.registro label {  
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form.registro h4 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--borderActive);
+  padding-bottom: 10px;
+}
+
+form.registro div.caja {
+  background-color: white;
+  border: 1px solid var(--borderInactive);
+  padding: 10px;
+  margin: 10px;
+}
+
+form.registro div.campo {
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  form.registro div.campo {
+    float: left;
+    width: 33.3%;
+  }
+}
+
+form.registro .tabla-precio:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+form.registro .tabla-precio input {
+  clear: both;
+  width: 100px;
+  margin: 10px auto 0 auto;
+  display: block;
+}
+
+form.registro .contenido-dia {
+  padding: 20px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  form.registro .contenido-dia > div { /*aplica el estilo solo a los hijos (div) directos del padre*/
+    float: left;
+    width: 33.3%;
+  }
+
+  form.registro .contenido-dia > div p { 
+    text-align: left;
+  }
+
+  form.registro .contenido-dia > div label { 
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  form.registro .contenido-dia > div input { 
+    margin-right: 10px;
+  }
+
+  form.registro .contenido-dia > div time { 
+    color: var(--mainColor);
+    font-weight: bold;
+  }
+}
+
+form.registro .resumen p {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+form.registro .resumen .extras {
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+
+form.registro .extras .orden {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+form.registro .extras .orden input {
+  margin: 10px 0 0 0;
+}
+
+form.registro .resumen .total {
+  float: right;
+  width: 50%;
+  padding: 30px;
+}
+
+form.registro .resumen input {
+  display: block;
+  margin: 10px auto;
+}
+
+form.registro #lista-productos {
+  background-color: #e1e1e1;
+  padding: 20px;
+  display: none;
+}
+
+form.registro #suma-total {
+  font-size: 2em;
+  color: var(--mainColor) ;
+  text-align: center;
+}
+
+form.registro #error {  
+  display: none;
+  margin: 0 20px;
+  color: red;  
+  border-bottom: 2px solid red;
 }
 
 /* ==========================================================================
