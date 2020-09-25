@@ -1,3 +1,4 @@
+/* --------------------- CODIGO JAVASCRIPT - SIN JQUERY --------------------- */
 //dentro de esta funcion agregamos todo el codigo js,
 //para que solo se comience a ejecutar una vez que todas
 //las etiquetas han sido cargadas
@@ -17,7 +18,7 @@
         L.marker([13.310672, -87.191159]).addTo(map)
             .bindPopup('GDLWebcamp 2020<br>Boletos disponibles')
             .openPopup()
-            .bindTooltip('Un Tooltop')
+            .bindTooltip('Un Tooltip')
             .openTooltip();
 
 
@@ -148,7 +149,53 @@
                 this.style.border = '';
             }
         };
-
         /* ---------------------------- End - Custom Code --------------------------- */
     });
 })();
+
+
+/* --------------------- CODIGO JAVASCRIPT - CON JQUERY --------------------- */
+//dentro de esta funcion agregamos todo el codigo js,
+//para que solo se comience a ejecutar una vez que todas
+//las etiquetas han sido cargadas
+// $(function () {
+$(document).ready(function () {
+
+    /* ------------------------ Programa de conferencias ------------------------ */
+    // mostramos el primer programa del evento por default    
+    $('.menu-programa a:first').addClass('activo');
+    $('.programa-evento .info-curso:first').show();
+
+    // verificamos el evento seleccionado al dar click
+    $('.menu-programa a').on('click', function () {
+        let programaEvento = $(this).attr('href');
+
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo');
+
+        $('.ocultar').hide();
+        $(programaEvento).fadeIn(1000);
+        return false;
+    });
+
+    /* ------------------------------- Animaciones ------------------------------ */
+    // titulo
+    $('.nombre-sitio').lettering();
+
+    // resumen evento
+    $('.resumen-evento li:nth-child(1) p').animateNumber({ number: 6 }, 1200);
+    $('.resumen-evento li:nth-child(2) p').animateNumber({ number: 15 }, 1200);
+    $('.resumen-evento li:nth-child(3) p').animateNumber({ number: 3 }, 1500);
+    $('.resumen-evento li:nth-child(4) p').animateNumber({ number: 9 }, 1500);
+
+    // cuenta regresiva
+    $('.cuenta-regresiva').countdown('2020/09/30 12:00:00', function (e) {
+        $('#dias').html(e.strftime('%D'));
+        $('#horas').html(e.strftime('%H'));
+        $('#minutos').html(e.strftime('%M'));
+        $('#segundos').html(e.strftime('%S'));
+    })
+
+
+
+});

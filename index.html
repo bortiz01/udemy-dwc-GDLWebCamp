@@ -19,11 +19,9 @@
   <link rel="stylesheet" href="css/normalize.css" />
 
   <!-- ----------------------------- Begin - Custom Style ----------------------------- -->
-
   <link rel="stylesheet" href="css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=PT+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-
+  <link rel="stylesheet" href="css/maps/leaflet.css" />
   <!-- ----------------------------- End - Custom Style ----------------------------- -->
 
   <link rel="stylesheet" href="css/main.css" />
@@ -33,7 +31,6 @@
 
 <body>
   <!-- ----------------------------- Begin - Custom Code ----------------------------- -->
-
   <header class="site-header">
     <div class="hero">
       <div class="contenido-header">
@@ -135,6 +132,40 @@
             </div>
             <a href="#" class="button float-right">Ver todos</a>
           </div>
+
+          <div id="conferencias" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Como ser freelancer</h3>
+              <p><i class="fas fa-clock"></i>10:00 a.m.</p>
+              <p><i class="fas fa-calendar"></i>31 Ago</p>
+              <p><i class="fas fa-user"></i>Juan Pablo Valdez</p>
+            </div>
+
+            <div class="detalle-evento">
+              <h3>Tecnologias del futuro</h3>
+              <p><i class="fas fa-clock"></i>17:00 a.m.</p>
+              <p><i class="fas fa-calendar"></i>10 Dic</p>
+              <p><i class="fas fa-user"></i>Susan Sanchez</p>
+            </div>
+            <a href="#" class="button float-right">Ver todos</a>
+          </div>
+
+          <div id="seminarios" class="info-curso ocultar clearfix">
+            <div class="detalle-evento">
+              <h3>Diseño UI/UX para moviles</h3>
+              <p><i class="fas fa-clock"></i>17:00 a.m.</p>
+              <p><i class="fas fa-calendar"></i>11 Dic</p>
+              <p><i class="fas fa-user"></i>Harold Garcia</p>
+            </div>
+
+            <div class="detalle-evento">
+              <h3>Aprende a programar en un mañana</h3>
+              <p><i class="fas fa-clock"></i>10:00 a.m.</p>
+              <p><i class="fas fa-calendar"></i>11 Dic</p>
+              <p><i class="fas fa-user"></i>Susana Rivera</p>
+            </div>
+            <a href="#" class="button float-right">Ver todos</a>
+          </div>
         </div>
       </div>
     </div>
@@ -188,16 +219,16 @@
       <!-- <ul class="resumen-evento clearfix"> -->
       <ul class="resumen-evento">
         <li>
-          <p class="numero">6</p>Invitados
+          <p class="numero"></p>Invitados
         </li>
         <li>
-          <p class="numero">15</p>Talleres
+          <p class="numero"></p>Talleres
         </li>
         <li>
-          <p class="numero">3</p>Dias
+          <p class="numero"></p>Dias
         </li>
         <li>
-          <p class="numero">9</p>Conferencias
+          <p class="numero"></p>Conferencias
         </li>
       </ul>
     </div>
@@ -314,16 +345,16 @@
       <!-- <ul class="clearfix"> -->
       <ul>
         <li>
-          <p class="numero">80</p>dias
+          <p id='dias' class="numero"></p>dias
         </li>
         <li>
-          <p class="numero">15</p>horas
+          <p id='horas' class="numero"></p>horas
         </li>
         <li>
-          <p class="numero">5</p>minutos
+          <p id='minutos' class="numero"></p>minutos
         </li>
         <li>
-          <p class="numero">30</p>segundos
+          <p id='segundos' class="numero"></p>segundos
         </li>
       </ul>
     </div>
@@ -366,14 +397,12 @@
       Todos los derechos reservados GDLWEBCAMP 2020.
     </p>
   </footer>
-
   <!-- -------------------------- End - Custom Code -------------------------- -->
 
 
   <!-- ----------------------- Begin - Custom Scripts ------------------------ -->
-
-  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
+  <script src="js/jquery.js"></script>
+  <script src="js/maps/leaflet.js"></script>
   <!-- ------------------------ End - Custom Scripts ------------------------- -->
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
