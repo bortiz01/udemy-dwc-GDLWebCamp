@@ -242,6 +242,12 @@ nav.redes-sociales a {
   margin-right: 20px;
 }
 
+@media only screen and (min-width: 768px) {
+  nav.redes-sociales a {
+    font-size: 2.5vw;
+  }
+}
+
 nav.redes-sociales a:last-child {
   margin-right: 0px;
 }
@@ -271,8 +277,18 @@ div.informacion-evento p {
 div.informacion-evento p i {
   color: var(--mainColor);
   /* font-size: 2.4rem; */
-  font-size: 3vw;
+  font-size: 3.5vw;
   padding-right: 3px;
+}
+
+@media only screen and (min-width: 768px) {
+  div.informacion-evento p {
+    font-size: 2vw;
+  }
+  
+  div.informacion-evento p i {
+    font-size: 2.5vw;
+  }
 }
 
 .infoHeader {
@@ -361,47 +377,73 @@ p.eslogan {
 /* ------------------------------- Barra ------------------------------- */
 div.barra {
   background-color: var(--backgroundBar);
-  padding: 20px 0;
+  padding: 10px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  div.barra {
+    padding: 20px 0;
+  } 
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 div.barra-menu {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
+
+/* ---------------------------------- Logo ---------------------------------- */
 div.logo {
-  width: 80%;
+  /* width: 80%; */
+  flex-basis: calc(60% - 1rem);
   margin: auto 0;
   /* float: left; */
-}
-
-@media only screen and (min-width: 768px) {
-  div.logo {
-    width: 33%;
-  }
 }
 
 div.logo img {
   width: 100%;
 }
 
+@media only screen and (min-width: 768px) {
+  div.logo {
+    /* width: 33%; */
+    flex-basis: calc(30% - 1rem);
+  }
+
+  /* div.logo img {
+    width: 100%;
+  } */
+}
+
 /* ------------------------------- Navegacion ------------------------------- */
 nav.navegacion-principal {
   display: none;
+  /* width: 100%; */
+  flex-basis: 100%;
+  margin-top: 10px;
 }
 
 nav.navegacion-principal a {
   font-family: "Oswald", sans-serif;
   color: white;
   /* font-size: 1.3em; */
-  font-size: 2.1vw;
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  font-size: 4vw;
+  margin-bottom: 10px;
   width: 100%;
   display: block;
   text-align: center;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;    
 }
 
 nav.navegacion-principal a:hover {
@@ -419,19 +461,25 @@ nav.navegacion-principal a:last-child:hover {
 
 @media only screen and (min-width: 768px) {
   nav.navegacion-principal {
-    width: 67%;
-    /* float: right; */
-    text-align: right;
     display: block;
+    flex-basis: calc(70% - 1rem);
+    /* width: 67%; */
+    /* float: right; */
+    text-align: right;    
+    margin: 0;
   }
 
   nav.navegacion-principal a {
     padding: 10px;
     display: inline-block;
     width: auto;
-    display: inline-block;
     text-align: center;
     margin: 0 10px 0 0;
+    font-size: 2.2vw;      
+  }
+
+  nav.navegacion-principal a:last-child {
+    margin: 0;
   }
 }
 
@@ -439,10 +487,12 @@ nav.navegacion-principal a:last-child:hover {
 div.menu-movil {
   /* width: 60px; */
   width: 50px;
+  /* flex-basis: calc(40% - 1rem); */
   display: block;
   /* float: right; */
   text-align: right;  
   margin: auto 0;
+  padding-right: 5px;
 }
 
 div.menu-movil:hover {
@@ -456,10 +506,14 @@ div.menu-movil:hover {
 }
 
 div.menu-movil span {
-  height: 8px;
-  margin-bottom: 6px;
+  height: 4px;
+  margin-bottom: 5px;
   background-color: white;
   display: block;
+}
+
+div.menu-movil span:last-child {
+  margin-bottom: 0px;
 }
 
 /* -------------------------------- Talleres -------------------------------- */
@@ -964,6 +1018,26 @@ p.copyright {
 }
 
 /* -------------------------------- Internas -------------------------------- */
+nav.navegacion-principal .activo {
+  border-bottom: 2px solid var(--borderActive);
+}
+
+/* ------------------------------- Conferencia ------------------------------ */
+div.galeria {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+div.galeria a {
+  display: inline-block;
+  margin-bottom: 2%;
+}
+
+div.galeria a img {
+  max-width: 200px;  
+}
+
 /* ------------------------------- Reservacion ------------------------------ */
 form.registro h3 {
   text-align: center;
